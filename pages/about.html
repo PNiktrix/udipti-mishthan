@@ -1,272 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Udipti Mishthan — Our story, values and commitment to quality homemade Indian sweets in Mumbai.">
-  <title>About Us — Udipti Mishthan</title>
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/components.css">
-  <link rel="stylesheet" href="../css/responsive.css">
-  <link rel="icon" type="image/png" href="../data/images/logo.png">
-  <style>
-    .about-intro-section {
-      padding: 80px 0;
-      background: var(--cream-mid);
-    }
-    .about-intro-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-    .about-intro-img {
-      position: relative;
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      aspect-ratio: 4/3;
-      box-shadow: var(--shadow-hard);
-    }
-    .about-intro-img img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-    }
-    .about-intro-img::after {
-      content: '';
-      position: absolute;
-      inset: -12px;
-      border: 2px solid var(--gold);
-      border-radius: var(--radius-xl);
-      z-index: -1;
-    }
-    .about-intro-content .section-label { display: block; margin-bottom: 8px; }
-    .about-intro-content h2 { margin-bottom: 20px; }
-    .about-intro-content p { margin-bottom: 14px; }
-    .about-values-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-    .about-val-card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 28px 20px;
-      text-align: center;
-      box-shadow: var(--shadow-soft);
-      transition: var(--transition);
-    }
-    .about-val-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-med); }
-    .about-val-icon { font-size: 2.6rem; margin-bottom: 12px; }
-    .about-val-card h3 { color: var(--gold); font-size: 1rem; margin-bottom: 8px; }
-    .about-val-card p { font-size: 0.88rem; color: var(--text-mid); }
-    .promise-section {
-      background: linear-gradient(135deg, var(--brown) 0%, var(--brown-mid) 100%);
-      padding: 80px 0;
-      color: white;
-    }
-    .promise-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      margin-top: 48px;
-    }
-    .promise-card {
-      text-align: center;
-      padding: 24px;
-      border-radius: var(--radius-lg);
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-    .promise-num {
-      font-family: var(--font-display);
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--gold-pale);
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-    .promise-label { font-size: 0.85rem; color: rgba(255,255,255,0.7); }
-    @media (max-width: 900px) {
-      .about-intro-grid { grid-template-columns: 1fr; }
-      .about-intro-img { max-width: 480px; margin: 0 auto; }
-    }
-    @media (max-width: 768px) {
-      .about-values-grid { grid-template-columns: 1fr 1fr; }
-      .promise-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 480px) {
-      .about-values-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – Udipti Mishthan</title>
+  <link rel="stylesheet" href="../CSS/main.css" />
+  <link rel="stylesheet" href="../CSS/components.css" />
+  <link rel="stylesheet" href="../CSS/responsive.css" />
+  <link rel="stylesheet" href="../CSS/fix.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
-  <div id="nav-placeholder"></div>
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-top">
+      <span><i class="fas fa-phone-alt"></i> +91 86551 67770</span>
+      <span><i class="fas fa-clock"></i> Mon–Sun: 8:00 AM – 9:00 PM</span>
+      <span><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra</span>
+    </div>
+    <nav class="navbar container">
+      <a href="../index.html" class="logo">
+        <img src="../anik/images/logo.png" alt="Udipti Mishthan" onerror="this.style.display='none';document.getElementById('logoText').style.display='block'" />
+        <span id="logoText" class="logo-text" style="display:none;">🍬 Udipti Mishthan</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#products">Sweets</a></li>
+        <li><a href="festival.html">Festival</a></li>
+        <li><a href="../gallery.html">Gallery</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist">
+          <i class="fas fa-heart"></i>
+          <span class="badge" id="wishlistCount">0</span>
+        </button>
+        <button class="icon-btn" id="cartBtn" aria-label="Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="badge" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
 
-  <!-- Hero -->
-  <section class="page-hero">
-    <div class="section-inner">
-      <span class="section-label">Our Story</span>
-      <h1>About Udipti Mishthan</h1>
-      <p>A labour of love, a story of tradition — handcrafted sweets made for the heart.</p>
+  <!-- Cart / Wishlist sidebars -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+      <button id="cartClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total"><span>Total:</span><strong id="cartTotal">₹0</strong></div>
+      <button class="btn btn-whatsapp btn-block" id="whatsappOrder">
+        <i class="fab fa-whatsapp"></i> Order via WhatsApp
+      </button>
+    </div>
+  </aside>
+  <div class="wishlist-overlay" id="wishlistOverlay"></div>
+  <aside class="wishlist-sidebar" id="wishlistSidebar">
+    <div class="cart-header">
+      <h3><i class="fas fa-heart"></i> Wishlist</h3>
+      <button id="wishlistClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="wishlist-items" id="wishlistItems"></div>
+  </aside>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="background-image:url('../anik/images/about-banner.jpg')">
+    <div class="page-hero-overlay">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="../index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>About Us</span>
+        </nav>
+        <h1>Our Story</h1>
+        <p>A legacy of pure taste &amp; healthy sweetness</p>
+      </div>
     </div>
   </section>
 
-  <!-- Intro -->
-  <section class="about-intro-section">
-    <div class="section-inner">
-      <div class="about-intro-grid">
-        <div class="about-intro-img">
-          <img src="../data/images/about-story.jpg" alt="Our Story" onerror="this.src='../data/images/placeholder.jpg'">
+  <!-- STORY SECTION -->
+  <section class="section about-story">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <img src="../anik/images/about-shop.jpg" alt="Udipti Mishthan Shop"
+               onerror="this.src='../anik/images/placeholder.jpg'" />
+          <div class="about-badge">
+            <span class="big-num">25+</span>
+            <span>Years of Sweetness</span>
+          </div>
         </div>
-        <div class="about-intro-content">
-          <span class="section-label">Where it all began</span>
-          <h2>Missing the Taste of Home?</h2>
-          <p>Udipti Mishthan was born from a simple feeling that many people in Mumbai share — the longing for authentic, home-cooked sweets that taste exactly like what your grandmother used to make.</p>
-          <p>We are a home-based mithai shop in Chembur, Mumbai, passionately crafting traditional Maharashtrian and Indian sweets with pure homemade ghee, natural ingredients, and most importantly — love.</p>
-          <p>Every ladoo we roll, every modak we shape, every peda we press — all done by hand, for you. We believe a sweet isn't just a sweet. It's a memory, a celebration, a hug on a plate.</p>
-          <p><strong style="color:var(--brown)">No preservatives. No artificial flavours. Just pure, homemade goodness.</strong></p>
-          <div style="margin-top:24px;">
-            <a href="https://wa.me/918655167770" target="_blank" class="btn-primary">💬 Order Now</a>
+        <div class="about-text">
+          <span class="section-tag">🍬 Who We Are</span>
+          <h2>The Udipti Mishthan Story</h2>
+          <p>Udipti Mishthan was born from a simple belief — <strong>pure ingredients make the purest sweets</strong>. Founded with a passion for traditional Indian mithai, we have been crafting handmade sweets in the heart of Mumbai for over two decades.</p>
+          <p>Every sweet at Udipti Mishthan is made fresh each morning using time-honoured recipes passed down through generations. We never compromise on quality — no artificial colours, no preservatives, just natural goodness in every bite.</p>
+          <p>From classic Ladoo and Barfi to modern sugar-free &amp; jaggery sweets, we cater to every palate — including health-conscious customers, diabetics, and those seeking vegan options.</p>
+          <div class="about-stats">
+            <div class="stat"><strong>25+</strong><span>Years</span></div>
+            <div class="stat"><strong>50+</strong><span>Varieties</span></div>
+            <div class="stat"><strong>10K+</strong><span>Happy Customers</span></div>
+            <div class="stat"><strong>100%</strong><span>Natural</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Values -->
-  <section class="section">
-    <div class="section-inner">
+  <!-- VALUES SECTION -->
+  <section class="section values-section">
+    <div class="container">
       <div class="section-header">
-        <span class="section-label">What We Stand For</span>
-        <h2>Our Core Values</h2>
+        <span class="section-tag">💎 Our Values</span>
+        <h2 class="section-title">Why We're Different</h2>
       </div>
-      <div class="about-values-grid">
-        <div class="about-val-card">
-          <div class="about-val-icon">🌿</div>
-          <h3>Natural Ingredients</h3>
-          <p>We use only the freshest, most natural ingredients — no preservatives, no artificial colours, no shortcuts.</p>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-seedling"></i></div>
+          <h3>Pure Ingredients</h3>
+          <p>We source only the finest raw materials — farm-fresh milk, premium dry fruits, natural sweeteners and pure ghee. No shortcuts, ever.</p>
         </div>
-        <div class="about-val-card">
-          <div class="about-val-icon">🧈</div>
-          <h3>Pure Homemade Ghee</h3>
-          <p>The secret to our taste is our pure cow ghee, made fresh at home — not commercial shortcuts.</p>
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-hand-sparkles"></i></div>
+          <h3>Handmade Daily</h3>
+          <p>Every sweet is crafted by hand every single morning. No factory production — just skilled artisans pouring love into every piece.</p>
         </div>
-        <div class="about-val-card">
-          <div class="about-val-icon">🫶</div>
-          <h3>Made with Love</h3>
-          <p>Each order is hand-prepared with attention and care. We don't make in bulk — we make for you.</p>
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Hygienic Kitchen</h3>
+          <p>Our FSSAI-certified kitchen maintains the highest standards of cleanliness. Regular quality checks ensure every sweet is safe and fresh.</p>
         </div>
-        <div class="about-val-card">
-          <div class="about-val-icon">🏡</div>
-          <h3>Homemade Quality</h3>
-          <p>Our kitchen is our home. Every sweet carries the warmth and authenticity of home cooking.</p>
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-heart"></i></div>
+          <h3>Health-First Options</h3>
+          <p>We believe everyone deserves to enjoy sweets. Our sugar-free, jaggery-based and vegan range ensures nobody misses out.</p>
         </div>
-        <div class="about-val-card">
-          <div class="about-val-icon">🧹</div>
-          <h3>Hygienic Preparation</h3>
-          <p>We maintain the highest standards of cleanliness and hygiene in our preparation process.</p>
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-gift"></i></div>
+          <h3>Gift Packaging</h3>
+          <p>Beautiful gift boxes for every occasion — Diwali, weddings, corporate events. Custom packaging available for bulk orders.</p>
         </div>
-        <div class="about-val-card">
-          <div class="about-val-icon">🎯</div>
-          <h3>Customer First</h3>
-          <p>Your satisfaction and feedback shapes every improvement we make. We listen and we care.</p>
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-star"></i></div>
+          <h3>Trusted for Generations</h3>
+          <p>Mumbai families have trusted Udipti Mishthan for generations. Our loyal customers are our greatest pride and motivation.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Promise Numbers -->
-  <section class="promise-section">
-    <div class="section-inner">
+  <!-- PROCESS SECTION -->
+  <section class="section process-section">
+    <div class="container">
       <div class="section-header">
-        <h2 style="color:var(--gold-pale)">Our Sweet Promise</h2>
-        <p style="color:rgba(255,255,255,0.7)">Numbers that reflect our commitment to quality and love.</p>
+        <span class="section-tag">👨‍🍳 Our Process</span>
+        <h2 class="section-title">From Kitchen to Your Home</h2>
       </div>
-      <div class="promise-grid">
-        <div class="promise-card">
-          <div class="promise-num">19+</div>
-          <div class="promise-label">Sweet Varieties</div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div class="step-icon"><i class="fas fa-shopping-basket"></i></div>
+          <h4>Sourcing</h4>
+          <p>We hand-pick the finest ingredients every morning from trusted local suppliers</p>
         </div>
-        <div class="promise-card">
-          <div class="promise-num">500+</div>
-          <div class="promise-label">Happy Customers</div>
+        <div class="process-arrow"><i class="fas fa-chevron-right"></i></div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div class="step-icon"><i class="fas fa-fire"></i></div>
+          <h4>Preparation</h4>
+          <p>Skilled artisans follow traditional recipes using pure ghee and natural flavours</p>
         </div>
-        <div class="promise-card">
-          <div class="promise-num">100%</div>
-          <div class="promise-label">Homemade</div>
+        <div class="process-arrow"><i class="fas fa-chevron-right"></i></div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+          <h4>Quality Check</h4>
+          <p>Every batch goes through a rigorous taste and hygiene check before packaging</p>
         </div>
-        <div class="promise-card">
-          <div class="promise-num">0%</div>
-          <div class="promise-label">Preservatives</div>
+        <div class="process-arrow"><i class="fas fa-chevron-right"></i></div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <div class="step-icon"><i class="fas fa-box-open"></i></div>
+          <h4>Packaging</h4>
+          <p>Sweets are packed fresh in hygienic, food-grade boxes ready for delivery</p>
+        </div>
+        <div class="process-arrow"><i class="fas fa-chevron-right"></i></div>
+        <div class="process-step">
+          <div class="step-num">05</div>
+          <div class="step-icon"><i class="fas fa-truck"></i></div>
+          <h4>Delivery</h4>
+          <p>Same-day delivery across Mumbai for orders placed before 3 PM</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Team / Process -->
-  <section class="section" style="background:var(--cream-mid)">
-    <div class="section-inner">
-      <div class="section-header">
-        <span class="section-label">How We Make it Special</span>
-        <h2>Our Sweet Making Process</h2>
-      </div>
-      <div class="team-grid">
-        <div class="team-card">
-          <div class="team-card-icon">🛒</div>
-          <h3>Fresh Ingredients Daily</h3>
-          <p>We source the freshest ingredients every day — seasonal fruits, fresh coconut, pure ghee and quality grains.</p>
-        </div>
-        <div class="team-card">
-          <div class="team-card-icon">🔥</div>
-          <h3>Traditional Recipes</h3>
-          <p>Every recipe is rooted in traditional Maharashtrian culinary wisdom, passed down through generations.</p>
-        </div>
-        <div class="team-card">
-          <div class="team-card-icon">🤲</div>
-          <h3>Hand-Crafted</h3>
-          <p>Each ladoo, modak and sweet is shaped by hand with care and precision — no machines, no shortcuts.</p>
-        </div>
-        <div class="team-card">
-          <div class="team-card-icon">📦</div>
-          <h3>Carefully Packed</h3>
-          <p>Every order is packaged hygienically and lovingly, ensuring freshness when it reaches you.</p>
+  <!-- CTA STRIP -->
+  <section class="cta-strip">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to taste the difference?</h2>
+        <p>Order fresh handmade sweets today — delivered right to your door.</p>
+        <div class="cta-btns">
+          <a href="../index.html#products" class="btn btn-primary btn-lg">Shop Now</a>
+          <a href="https://wa.me/918655167770" class="btn btn-whatsapp btn-lg" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp Order
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <div class="order-section">
-    <div class="section-inner">
-      <h2>Taste the Difference</h2>
-      <p>Experience the warmth of homemade sweets. Order today with 1–2 days advance notice.</p>
-      <div class="order-methods">
-        <a href="https://wa.me/918655167770" target="_blank" class="order-method">
-          <div class="order-method-icon">💬</div>
-          <div class="order-method-label">WhatsApp</div>
-          <div class="order-method-sub">8655167770</div>
-        </a>
-        <a href="../pages/contact.html" class="order-method">
-          <div class="order-method-icon">📍</div>
-          <div class="order-method-label">Visit Us</div>
-          <div class="order-method-sub">Chembur, Mumbai</div>
-        </a>
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/918655167770" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top container">
+      <div class="footer-col">
+        <span class="logo-text">🍬 Udipti Mishthan</span>
+        <p>Pure Taste, Healthy Sweetness. Handcrafted Indian sweets.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#products">Sweets</a></li>
+          <li><a href="festival.html">Festival Specials</a></li>
+          <li><a href="../gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="contact-list">
+          <li><i class="fas fa-phone-alt"></i> <a href="tel:+918655167770">+91 86551 67770</a></li>
+          <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/918655167770">WhatsApp</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra</li>
+        </ul>
       </div>
     </div>
-  </div>
+    <div class="footer-bottom">
+      <p>© <span id="footerYear"></span> Udipti Mishthan. Made with <i class="fas fa-heart"></i> in Mumbai.</p>
+    </div>
+  </footer>
 
-  <div id="footer-placeholder"></div>
-  <a href="https://wa.me/918655167770" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
-    <svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z"/></svg>
-  </a>
-
-  <script src="../js/config.js"></script>
-  <script src="../js/wishlist.js"></script>
-  <script src="../js/products.js"></script>
-  <script src="../js/cart.js"></script>
-  <script src="../js/filter.js"></script>
-  <script src="../js/modal.js"></script>
-  <script src="../js/app.js"></script>
+  <script src="../anik/config.js"></script>
+  <script src="../anik/cart.js"></script>
+  <script src="../anik/wishlist.js"></script>
+  <script src="../anik/order.js"></script>
+  <script src="../anik/app.js"></script>
+  <script>
+    document.getElementById('footerYear').textContent = new Date().getFullYear();
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    document.getElementById('cartBtn').addEventListener('click', () => {
+      document.getElementById('cartSidebar').classList.add('open');
+      document.getElementById('cartOverlay').classList.add('open');
+    });
+    document.getElementById('cartClose').addEventListener('click', () => {
+      document.getElementById('cartSidebar').classList.remove('open');
+      document.getElementById('cartOverlay').classList.remove('open');
+    });
+    document.getElementById('cartOverlay').addEventListener('click', () => {
+      document.getElementById('cartSidebar').classList.remove('open');
+      document.getElementById('cartOverlay').classList.remove('open');
+    });
+    document.getElementById('wishlistBtn').addEventListener('click', () => {
+      document.getElementById('wishlistSidebar').classList.add('open');
+      document.getElementById('wishlistOverlay').classList.add('open');
+    });
+    document.getElementById('wishlistClose').addEventListener('click', () => {
+      document.getElementById('wishlistSidebar').classList.remove('open');
+      document.getElementById('wishlistOverlay').classList.remove('open');
+    });
+    document.getElementById('wishlistOverlay').addEventListener('click', () => {
+      document.getElementById('wishlistSidebar').classList.remove('open');
+      document.getElementById('wishlistOverlay').classList.remove('open');
+    });
+  </script>
 </body>
 </html>
