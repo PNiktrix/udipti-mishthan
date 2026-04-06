@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Udipti Mishthan – Pure Taste, Healthy Sweetness</title>
+  <meta name="description" content="Udipti Mishthan – Handcrafted Indian sweets made with pure ingredients. Sugar-free, jaggery, dry fruit & festive sweets in Mumbai." />
+  <link rel="stylesheet" href="CSS/main.css" />
+  <link rel="stylesheet" href="CSS/components.css" />
+  <link rel="stylesheet" href="CSS/responsive.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER / NAVBAR
+  ═══════════════════════════════════════════ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-top">
+      <span><i class="fas fa-phone-alt"></i> +91 86551 67770</span>
+      <span><i class="fas fa-clock"></i> Mon–Sun: 8:00 AM – 9:00 PM</span>
+      <span><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra</span>
+    </div>
+    <nav class="navbar container">
+      <a href="index.html" class="logo">
+        <img src="anik/images/logo.png" alt="Udipti Mishthan" id="logoImg" onerror="this.style.display='none';document.getElementById('logoText').style.display='block'" />
+        <span id="logoText" class="logo-text" style="display:none;">🍬 Udipti Mishthan</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#products">Sweets</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="pages/festival.html">Festival</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Search"><i class="fas fa-search"></i></button>
+        <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist">
+          <i class="fas fa-heart"></i>
+          <span class="badge" id="wishlistCount">0</span>
+        </button>
+        <button class="icon-btn" id="cartBtn" aria-label="Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="badge" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <input type="text" id="searchInput" placeholder="Search sweets… e.g. Ladoo, Barfi, Sugar-free…" />
+        <button id="searchClose"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       CART SIDEBAR
+  ═══════════════════════════════════════════ -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+      <button id="cartClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <i class="fas fa-shopping-bag"></i>
+        <p>Your cart is empty</p>
+        <a href="#products" class="btn btn-primary">Browse Sweets</a>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total">
+        <span>Total:</span>
+        <strong id="cartTotal">₹0</strong>
+      </div>
+      <button class="btn btn-whatsapp btn-block" id="whatsappOrder">
+        <i class="fab fa-whatsapp"></i> Order via WhatsApp
+      </button>
+      <p class="cart-note">Order directly via WhatsApp for fastest delivery!</p>
+    </div>
+  </aside>
+
+  <!-- ═══════════════════════════════════════════
+       WISHLIST SIDEBAR
+  ═══════════════════════════════════════════ -->
+  <div class="wishlist-overlay" id="wishlistOverlay"></div>
+  <aside class="wishlist-sidebar" id="wishlistSidebar">
+    <div class="cart-header">
+      <h3><i class="fas fa-heart"></i> Wishlist</h3>
+      <button id="wishlistClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="wishlist-items" id="wishlistItems">
+      <div class="cart-empty">
+        <i class="fas fa-heart"></i>
+        <p>Your wishlist is empty</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ═══════════════════════════════════════════
+       PRODUCT MODAL
+  ═══════════════════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="product-modal" id="productModal">
+    <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+    <div class="modal-content" id="modalContent">
+      <!-- Filled by modal.js -->
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       HERO BANNER
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-slider" id="heroSlider">
+      <div class="hero-slide active" style="background-image:url('anik/images/banner1.jpg')">
+        <div class="hero-content container">
+          <span class="hero-badge">🌿 Pure &amp; Natural</span>
+          <h1>Pure Taste,<br /><em>Healthy Sweetness</em></h1>
+          <p>Handcrafted Indian sweets made with love — sugar-free, jaggery &amp; dry fruit options available</p>
+          <div class="hero-btns">
+            <a href="#products" class="btn btn-primary btn-lg">Explore Sweets</a>
+            <a href="pages/festival.html" class="btn btn-outline btn-lg">Festival Specials</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide" style="background-image:url('anik/images/banner2.jpg')">
+        <div class="hero-content container">
+          <span class="hero-badge">🎁 Perfect Gifting</span>
+          <h1>Gift Boxes &amp;<br /><em>Festival Specials</em></h1>
+          <p>Diwali, Raksha Bandhan &amp; Ganesh Chaturthi — celebrate with our handmade gift hampers</p>
+          <div class="hero-btns">
+            <a href="pages/festival.html" class="btn btn-primary btn-lg">View Festival</a>
+            <a href="#custom-builder" class="btn btn-outline btn-lg">Build Your Sweet</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide" style="background-image:url('anik/images/banner3.jpg')">
+        <div class="hero-content container">
+          <span class="hero-badge">🫙 Sugar-Free Range</span>
+          <h1>Healthy Sweets<br /><em>For Everyone</em></h1>
+          <p>Diabetic-friendly options — made with jaggery, stevia &amp; natural sweeteners</p>
+          <div class="hero-btns">
+            <a href="#categories" class="btn btn-primary btn-lg">Sugar-Free</a>
+            <a href="pages/contact.html" class="btn btn-outline btn-lg">Bulk Orders</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-dots" id="heroDots">
+      <span class="dot active" data-slide="0"></span>
+      <span class="dot" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+    </div>
+    <button class="hero-arrow prev" id="heroPrev"><i class="fas fa-chevron-left"></i></button>
+    <button class="hero-arrow next" id="heroNext"><i class="fas fa-chevron-right"></i></button>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       QUICK NAV STRIPS
+  ═══════════════════════════════════════════ -->
+  <section class="quick-nav">
+    <div class="container">
+      <div class="quick-nav-grid">
+        <a href="#categories" class="quick-card" data-filter="sugar-free">
+          <span class="quick-icon">🫙</span>
+          <span>Sugar-Free</span>
+        </a>
+        <a href="#categories" class="quick-card" data-filter="jaggery">
+          <span class="quick-icon">🍯</span>
+          <span>Jaggery</span>
+        </a>
+        <a href="#categories" class="quick-card" data-filter="dry-fruit">
+          <span class="quick-icon">🌰</span>
+          <span>Dry Fruit</span>
+        </a>
+        <a href="pages/festival.html" class="quick-card">
+          <span class="quick-icon">🪔</span>
+          <span>Festival</span>
+        </a>
+        <a href="#categories" class="quick-card" data-filter="gift-box">
+          <span class="quick-icon">🎁</span>
+          <span>Gift Boxes</span>
+        </a>
+        <a href="#custom-builder" class="quick-card">
+          <span class="quick-icon">✨</span>
+          <span>Custom Sweet</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FEATURED / SPECIAL SWEETS
+  ═══════════════════════════════════════════ -->
+  <section class="section featured-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">⭐ Top Picks</span>
+        <h2 class="section-title">Our Special Sweets</h2>
+        <p class="section-sub">Hand-picked favourites loved by generations of sweet lovers</p>
+      </div>
+      <div class="products-grid" id="featuredGrid">
+        <!-- Rendered by products.js with featured:true filter -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CATEGORIES STRIP
+  ═══════════════════════════════════════════ -->
+  <section class="section categories-section" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">📦 Browse</span>
+        <h2 class="section-title">Shop by Category</h2>
+      </div>
+      <div class="category-tabs" id="categoryTabs">
+        <button class="cat-tab active" data-cat="all">All Sweets</button>
+        <button class="cat-tab" data-cat="ladoo">Ladoo</button>
+        <button class="cat-tab" data-cat="barfi">Barfi</button>
+        <button class="cat-tab" data-cat="gulab-jamun">Gulab Jamun</button>
+        <button class="cat-tab" data-cat="dry-fruit">Dry Fruit</button>
+        <button class="cat-tab" data-cat="sugar-free">Sugar-Free</button>
+        <button class="cat-tab" data-cat="jaggery">Jaggery</button>
+        <button class="cat-tab" data-cat="gift-box">Gift Boxes</button>
+        <button class="cat-tab" data-cat="healthy">Healthy</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ALL PRODUCTS GRID
+  ═══════════════════════════════════════════ -->
+  <section class="section products-section" id="products">
+    <div class="container">
+      <div class="products-toolbar">
+        <p class="product-count" id="productCount">Showing all products</p>
+        <div class="toolbar-right">
+          <select id="sortSelect" class="sort-select">
+            <option value="default">Sort: Default</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name-asc">Name: A–Z</option>
+          </select>
+        </div>
+      </div>
+      <div class="products-grid" id="productsGrid">
+        <!-- Rendered by products.js -->
+        <div class="loading-spinner" id="productsLoader">
+          <i class="fas fa-spinner fa-spin"></i>
+          <p>Loading sweets…</p>
+        </div>
+      </div>
+      <div class="no-results" id="noResults" style="display:none;">
+        <i class="fas fa-search"></i>
+        <p>No sweets found. Try a different filter.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CUSTOM SWEET BUILDER
+  ═══════════════════════════════════════════ -->
+  <section class="section builder-section" id="custom-builder">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">🎨 Personalise</span>
+        <h2 class="section-title">Build Your Sweet</h2>
+        <p class="section-sub">Customise every detail — your sweet, your way</p>
+      </div>
+      <div class="builder-card">
+        <div class="builder-grid">
+          <!-- Sugar Type -->
+          <div class="builder-group">
+            <label class="builder-label"><i class="fas fa-cube"></i> Sugar Type</label>
+            <div class="option-pills" id="sugarTypePills">
+              <button class="pill active" data-group="sugar" data-val="with-sugar">With Sugar</button>
+              <button class="pill" data-group="sugar" data-val="sugar-free">Sugar-Free</button>
+              <button class="pill" data-group="sugar" data-val="jaggery">Jaggery</button>
+              <button class="pill" data-group="sugar" data-val="low-sugar">Low Sugar</button>
+            </div>
+          </div>
+          <!-- Diet -->
+          <div class="builder-group">
+            <label class="builder-label"><i class="fas fa-leaf"></i> Diet Type</label>
+            <div class="option-pills">
+              <button class="pill active" data-group="diet" data-val="regular">Regular</button>
+              <button class="pill" data-group="diet" data-val="vegan">Vegan</button>
+            </div>
+          </div>
+          <!-- Flavor -->
+          <div class="builder-group">
+            <label class="builder-label"><i class="fas fa-star"></i> Flavour</label>
+            <div class="option-pills">
+              <button class="pill active" data-group="flavor" data-val="classic">Classic</button>
+              <button class="pill" data-group="flavor" data-val="rose">Rose</button>
+              <button class="pill" data-group="flavor" data-val="kesar">Kesar</button>
+              <button class="pill" data-group="flavor" data-val="chocolate">Chocolate</button>
+              <button class="pill" data-group="flavor" data-val="coconut">Coconut</button>
+            </div>
+          </div>
+          <!-- Ingredients -->
+          <div class="builder-group">
+            <label class="builder-label"><i class="fas fa-seedling"></i> Ingredients</label>
+            <div class="option-pills">
+              <button class="pill active" data-group="ingredient" data-val="cashew">Cashew</button>
+              <button class="pill" data-group="ingredient" data-val="almond">Almond</button>
+              <button class="pill" data-group="ingredient" data-val="pistachio">Pistachio</button>
+              <button class="pill" data-group="ingredient" data-val="mixed-nuts">Mixed Nuts</button>
+            </div>
+          </div>
+          <!-- Weight -->
+          <div class="builder-group">
+            <label class="builder-label"><i class="fas fa-weight-hanging"></i> Weight</label>
+            <div class="option-pills">
+              <button class="pill active" data-group="weight" data-val="250g">250 g</button>
+              <button class="pill" data-group="weight" data-val="500g">500 g</button>
+              <button class="pill" data-group="weight" data-val="1kg">1 kg</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Builder Summary -->
+        <div class="builder-summary" id="builderSummary">
+          <div class="summary-info">
+            <p><strong>Your Custom Sweet:</strong></p>
+            <p id="summaryText">Classic Sweet · With Sugar · Regular · Cashew · 250 g</p>
+          </div>
+          <div class="summary-price">
+            <span>Estimated Price:</span>
+            <strong id="builderPrice">₹199</strong>
+          </div>
+          <button class="btn btn-whatsapp" id="builderWhatsApp">
+            <i class="fab fa-whatsapp"></i> Order This Sweet
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FESTIVAL SPECIALS STRIP
+  ═══════════════════════════════════════════ -->
+  <section class="section festival-strip">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">🪔 Celebrations</span>
+        <h2 class="section-title">Festival Specials</h2>
+        <p class="section-sub">Celebrate every festival with authentic Udipti Mishthan sweets</p>
+      </div>
+      <div class="festival-cards">
+        <a href="pages/festival.html?fest=diwali" class="festival-card" style="background-image:url('anik/images/diwali-banner.jpg')">
+          <div class="festival-overlay">
+            <span class="festival-icon">🪔</span>
+            <h3>Diwali Sweets</h3>
+            <p>Special Diwali gift boxes &amp; dry fruit hampers</p>
+            <span class="btn btn-outline-sm">Shop Now</span>
+          </div>
+        </a>
+        <a href="pages/festival.html?fest=raksha" class="festival-card" style="background-image:url('anik/images/raksha-banner.jpg')">
+          <div class="festival-overlay">
+            <span class="festival-icon">🎀</span>
+            <h3>Raksha Bandhan</h3>
+            <p>Gift packs &amp; premium sweet boxes for your sister</p>
+            <span class="btn btn-outline-sm">Shop Now</span>
+          </div>
+        </a>
+        <a href="pages/festival.html?fest=ganesh" class="festival-card" style="background-image:url('anik/images/ganesh-banner.jpg')">
+          <div class="festival-overlay">
+            <span class="festival-icon">🐘</span>
+            <h3>Ganesh Chaturthi</h3>
+            <p>Modak, laddoo &amp; traditional prasad sweets</p>
+            <span class="btn btn-outline-sm">Shop Now</span>
+          </div>
+        </a>
+      </div>
+      <div class="text-center mt-3">
+        <a href="pages/festival.html" class="btn btn-primary">View All Festival Specials</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHY CHOOSE US
+  ═══════════════════════════════════════════ -->
+  <section class="section why-us-section">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-hand-holding-heart"></i></div>
+          <h4>Handmade Daily</h4>
+          <p>Fresh sweets prepared every morning with traditional recipes</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-leaf"></i></div>
+          <h4>Pure Ingredients</h4>
+          <p>No artificial colours, no preservatives — only natural goodness</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+          <h4>Hygienic Preparation</h4>
+          <p>FSSAI certified kitchen with highest hygiene standards</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-truck"></i></div>
+          <h4>Fast Delivery</h4>
+          <p>Same-day delivery within Mumbai for orders before 3 PM</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-heart"></i></div>
+          <h4>Sugar-Free Options</h4>
+          <p>Diabetic-friendly sweets without compromising taste</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-gift"></i></div>
+          <h4>Custom Gift Boxes</h4>
+          <p>Corporate &amp; bulk orders with personalised packaging</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CUSTOMER REVIEWS
+  ═══════════════════════════════════════════ -->
+  <section class="section reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">💬 Testimonials</span>
+        <h2 class="section-title">What Our Customers Say</h2>
+      </div>
+      <div class="reviews-slider" id="reviewsSlider">
+        <!-- Rendered by app.js from reviews.json -->
+        <div class="loading-spinner">
+          <i class="fas fa-spinner fa-spin"></i>
+        </div>
+      </div>
+      <div class="reviews-dots" id="reviewsDots"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       GALLERY PREVIEW
+  ═══════════════════════════════════════════ -->
+  <section class="section gallery-preview-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">📸 Gallery</span>
+        <h2 class="section-title">From Our Kitchen</h2>
+      </div>
+      <div class="gallery-preview-grid" id="galleryPreviewGrid">
+        <!-- Rendered by app.js (first 6 gallery items) -->
+      </div>
+      <div class="text-center mt-3">
+        <a href="gallery.html" class="btn btn-primary">View Full Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHATSAPP FLOATING BUTTON
+  ═══════════════════════════════════════════ -->
+  <a href="https://wa.me/918655167770" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">Order on WhatsApp</span>
+  </a>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-top container">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="anik/images/logo.png" alt="Udipti Mishthan" onerror="this.style.display='none'" />
+          <span class="logo-text">🍬 Udipti Mishthan</span>
+        </div>
+        <p>Pure Taste, Healthy Sweetness. Handcrafted Indian sweets made with love and the finest ingredients since generations.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://wa.me/918655167770" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#products">Sweets</a></li>
+          <li><a href="pages/festival.html">Festival Specials</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#" data-filter="ladoo">Ladoo</a></li>
+          <li><a href="#" data-filter="barfi">Barfi</a></li>
+          <li><a href="#" data-filter="sugar-free">Sugar-Free Sweets</a></li>
+          <li><a href="#" data-filter="jaggery">Jaggery Sweets</a></li>
+          <li><a href="#" data-filter="dry-fruit">Dry Fruit Sweets</a></li>
+          <li><a href="#" data-filter="gift-box">Gift Boxes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="contact-list">
+          <li><i class="fas fa-phone-alt"></i> <a href="tel:+918655167770">+91 86551 67770</a></li>
+          <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/918655167770">WhatsApp Order</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra</li>
+          <li><i class="fas fa-clock"></i> Mon–Sun: 8:00 AM – 9:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="footerYear"></span> Udipti Mishthan. Made with <i class="fas fa-heart"></i> in Mumbai.</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       SCRIPTS — load in dependency order
+  ═══════════════════════════════════════════ -->
+  <script src="anik/config.js"></script>
+  <script src="anik/cart.js"></script>
+  <script src="anik/wishlist.js"></script>
+  <script src="anik/filter.js"></script>
+  <script src="anik/modal.js"></script>
+  <script src="anik/order.js"></script>
+  <script src="anik/products.js"></script>
+  <script src="anik/app.js"></script>
+
+  <script>
+    // ── Inline glue ── keeps index.html self-contained for GitHub Pages
+    document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+    // Hamburger toggle
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+
+    // Hero Slider
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dots .dot');
+    function goSlide(n) {
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+      currentSlide = (n + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+    }
+    document.getElementById('heroNext').addEventListener('click', () => goSlide(currentSlide + 1));
+    document.getElementById('heroPrev').addEventListener('click', () => goSlide(currentSlide - 1));
+    dots.forEach(d => d.addEventListener('click', () => goSlide(+d.dataset.slide)));
+    setInterval(() => goSlide(currentSlide + 1), 5000);
+
+    // Search toggle
+    document.getElementById('searchToggle').addEventListener('click', () => {
+      document.getElementById('searchBar').classList.toggle('open');
+      document.getElementById('searchInput').focus();
+    });
+    document.getElementById('searchClose').addEventListener('click', () => {
+      document.getElementById('searchBar').classList.remove('open');
+    });
+
+    // Cart sidebar
+    document.getElementById('cartBtn').addEventListener('click', () => {
+      document.getElementById('cartSidebar').classList.add('open');
+      document.getElementById('cartOverlay').classList.add('open');
+    });
+    document.getElementById('cartClose').addEventListener('click', () => {
+      document.getElementById('cartSidebar').classList.remove('open');
+      document.getElementById('cartOverlay').classList.remove('open');
+    });
+    document.getElementById('cartOverlay').addEventListener('click', () => {
+      document.getElementById('cartSidebar').classList.remove('open');
+      document.getElementById('cartOverlay').classList.remove('open');
+    });
+
+    // Wishlist sidebar
+    document.getElementById('wishlistBtn').addEventListener('click', () => {
+      document.getElementById('wishlistSidebar').classList.add('open');
+      document.getElementById('wishlistOverlay').classList.add('open');
+    });
+    document.getElementById('wishlistClose').addEventListener('click', () => {
+      document.getElementById('wishlistSidebar').classList.remove('open');
+      document.getElementById('wishlistOverlay').classList.remove('open');
+    });
+    document.getElementById('wishlistOverlay').addEventListener('click', () => {
+      document.getElementById('wishlistSidebar').classList.remove('open');
+      document.getElementById('wishlistOverlay').classList.remove('open');
+    });
+
+    // Category tabs → filter products
+    document.querySelectorAll('.cat-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        if (typeof filterProducts === 'function') filterProducts(tab.dataset.cat);
+        document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Quick nav filter pills
+    document.querySelectorAll('.quick-card[data-filter]').forEach(card => {
+      card.addEventListener('click', (e) => {
+        e.preventDefault();
+        const f = card.dataset.filter;
+        document.querySelector(`.cat-tab[data-cat="${f}"]`)?.click();
+      });
+    });
+
+    // Builder summary update
+    const builderState = { sugar: 'with-sugar', diet: 'regular', flavor: 'classic', ingredient: 'cashew', weight: '250g' };
+    const basePrice = { '250g': 199, '500g': 349, '1kg': 649 };
+    function updateBuilder() {
+      const summary = `${builderState.flavor} Sweet · ${builderState.sugar.replace(/-/g, ' ')} · ${builderState.diet} · ${builderState.ingredient} · ${builderState.weight}`;
+      document.getElementById('summaryText').textContent = summary;
+      document.getElementById('builderPrice').textContent = '₹' + basePrice[builderState.weight];
+    }
+    document.querySelectorAll('.option-pills .pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll(`.option-pills .pill[data-group="${pill.dataset.group}"]`).forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        builderState[pill.dataset.group] = pill.dataset.val;
+        updateBuilder();
+      });
+    });
+
+    // Builder WhatsApp order
+    document.getElementById('builderWhatsApp').addEventListener('click', () => {
+      const msg = `Hello Udipti Mishthan! I want to order a custom sweet:\n🍬 ${document.getElementById('summaryText').textContent}\n💰 Est. Price: ${document.getElementById('builderPrice').textContent}`;
+      window.open('https://wa.me/918655167770?text=' + encodeURIComponent(msg), '_blank');
+    });
+  </script>
+</body>
+</html>

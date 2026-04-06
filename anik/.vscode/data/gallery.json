@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "caption": "Assorted Ladoo Platter",
+    "category": "sweets",
+    "image": "anik/images/gallery/g1.jpg"
+  },
+  {
+    "id": 2,
+    "caption": "Kaju Katli — Classic Silver Vark",
+    "category": "sweets",
+    "image": "anik/images/gallery/g2.jpg"
+  },
+  {
+    "id": 3,
+    "caption": "Motichoor Ladoo",
+    "category": "sweets",
+    "image": "anik/images/gallery/g3.jpg"
+  },
+  {
+    "id": 4,
+    "caption": "Dry Fruit Barfi Selection",
+    "category": "sweets",
+    "image": "anik/images/gallery/g4.jpg"
+  },
+  {
+    "id": 5,
+    "caption": "Gulab Jamun — Freshly Made",
+    "category": "sweets",
+    "image": "anik/images/gallery/g5.jpg"
+  },
+  {
+    "id": 6,
+    "caption": "Jaggery Sweets Collection",
+    "category": "sweets",
+    "image": "anik/images/gallery/g6.jpg"
+  },
+  {
+    "id": 7,
+    "caption": "Our Shop Front",
+    "category": "shop",
+    "image": "anik/images/gallery/shop1.jpg"
+  },
+  {
+    "id": 8,
+    "caption": "Display Counter",
+    "category": "shop",
+    "image": "anik/images/gallery/shop2.jpg"
+  },
+  {
+    "id": 9,
+    "caption": "Packaging Station",
+    "category": "shop",
+    "image": "anik/images/gallery/shop3.jpg"
+  },
+  {
+    "id": 10,
+    "caption": "Kneading the Dough",
+    "category": "process",
+    "image": "anik/images/gallery/process1.jpg"
+  },
+  {
+    "id": 11,
+    "caption": "Shaping Modak by Hand",
+    "category": "process",
+    "image": "anik/images/gallery/process2.jpg"
+  },
+  {
+    "id": 12,
+    "caption": "Simmering Gulab Jamun",
+    "category": "process",
+    "image": "anik/images/gallery/process3.jpg"
+  },
+  {
+    "id": 13,
+    "caption": "Diwali Gift Hampers",
+    "category": "festival",
+    "image": "anik/images/gallery/festival1.jpg"
+  },
+  {
+    "id": 14,
+    "caption": "Ganesh Chaturthi Modak",
+    "category": "festival",
+    "image": "anik/images/gallery/festival2.jpg"
+  },
+  {
+    "id": 15,
+    "caption": "Raksha Bandhan Gift Pack",
+    "category": "festival",
+    "image": "anik/images/gallery/festival3.jpg"
+  }
+]
