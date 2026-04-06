@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Priya Sharma",
+    "location": "Chembur, Mumbai",
+    "rating": 5,
+    "date": "2025-01-15",
+    "comment": "The Besan Ladoo is absolutely divine! Tastes exactly like my grandmother used to make. Will definitely order again for Diwali.",
+    "product": "Besan Ladoo",
+    "avatar": "PS"
+  },
+  {
+    "id": 2,
+    "name": "Rajesh Patil",
+    "location": "Dadar, Mumbai",
+    "rating": 5,
+    "date": "2025-02-03",
+    "comment": "Ordered Dinkache Ladoo for winters and they are simply outstanding. Fresh, home-made quality is unmatched. My whole family loved it.",
+    "product": "Dinkache Ladoo",
+    "avatar": "RP"
+  },
+  {
+    "id": 3,
+    "name": "Sunita Joshi",
+    "location": "Ghatkopar, Mumbai",
+    "rating": 5,
+    "date": "2025-01-28",
+    "comment": "Ukadiche Modak for Ganesh Chaturthi was perfect! Soft shell, authentic filling. Better than any sweet shop in the area.",
+    "product": "Ukadiche Modak",
+    "avatar": "SJ"
+  },
+  {
+    "id": 4,
+    "name": "Amit Desai",
+    "location": "Andheri, Mumbai",
+    "rating": 4,
+    "date": "2025-02-10",
+    "comment": "Ordered a gift box of assorted ladoos for my office. Everyone was impressed! Quality packaging and everything tasted fresh.",
+    "product": "Assorted Gift Box",
+    "avatar": "AD"
+  },
+  {
+    "id": 5,
+    "name": "Meera Kulkarni",
+    "location": "Thane",
+    "rating": 5,
+    "date": "2025-01-20",
+    "comment": "The Puran Poli is heavenly! Got a dozen for my family function and everyone kept asking where I got them from. Super fresh and authentic.",
+    "product": "Puran Poli",
+    "avatar": "MK"
+  },
+  {
+    "id": 6,
+    "name": "Vikram Nair",
+    "location": "Borivali, Mumbai",
+    "rating": 5,
+    "date": "2025-03-05",
+    "comment": "Halim Ladoo is a gem - so hard to find authentic ones. Udipti Mishthan nails it every time. Ordered 3 times already this winter!",
+    "product": "Halim Che Ladoo",
+    "avatar": "VN"
+  },
+  {
+    "id": 7,
+    "name": "Kavita Mehta",
+    "location": "Bandra, Mumbai",
+    "rating": 4,
+    "date": "2025-02-22",
+    "comment": "Gajar Halwa was delicious and arrived fresh. The ghee quality is really evident in the taste. Will order again for sure!",
+    "product": "Gajar Halwa",
+    "avatar": "KM"
+  },
+  {
+    "id": 8,
+    "name": "Suresh Rao",
+    "location": "Mulund, Mumbai",
+    "rating": 5,
+    "date": "2025-01-08",
+    "comment": "Best mithai shop in Mumbai! The taste of home in every bite. Gulab Jamun is soft as a cloud. Quick delivery too!",
+    "product": "Gulab Jamun",
+    "avatar": "SR"
+  }
+]

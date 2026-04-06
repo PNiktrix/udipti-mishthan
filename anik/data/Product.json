@@ -1,0 +1,401 @@
+[
+  {
+    "id": 1,
+    "name": "Methiche Ladoo",
+    "category": "ladoo",
+    "tags": ["healthy", "winter-special", "traditional"],
+    "description": "A traditional, highly nutritious Indian sweet, specifically prepared during winters for its warming properties and health benefits. Made with fenugreek seeds, jaggery and pure ghee.",
+    "prices": {
+      "250g": 215,
+      "500g": 425,
+      "1kg": 850
+    },
+    "defaultWeight": "1kg",
+    "image": "data/images/methiche-ladoo.jpg",
+    "images": ["data/images/methiche-ladoo.jpg"],
+    "available": true,
+    "festivalSpecial": false,
+    "customOptions": ["with-sugar", "with-jaggery"],
+    "nutrition": "Rich in iron, calcium and digestive benefits from fenugreek",
+    "rating": 4.8,
+    "reviews": 42
+  },
+  {
+    "id": 2,
+    "name": "Dinkache Ladoo",
+    "category": "ladoo",
+    "tags": ["healthy", "winter-special", "traditional"],
+    "description": "Nutritious traditional Maharashtrian winter sweets made from edible gum (dink), dry fruits, jaggery, and ghee. Provides warmth and energy.",
+    "prices": {
+      "250g": 215,
+      "500g": 425,
+      "1kg": 850
+    },
+    "defaultWeight": "1kg",
+    "image": "data/images/dinkache-ladoo.jpg",
+    "images": ["data/images/dinkache-ladoo.jpg"],
+    "available": true,
+    "festivalSpecial": false,
+    "customOptions": ["with-jaggery"],
+    "nutrition": "High in protein, calcium, and healthy fats from dry fruits",
+    "rating": 4.9,
+    "reviews": 38
+  },
+  {
+    "id": 3,
+    "name": "Postshik Ladoo",
+    "category": "ladoo",
+    "tags": ["healthy", "nutritious"],
+    "description": "Highly nutritious ladoo made with a special blend of healthy grains, seeds, and natural sweeteners. Perfect for health-conscious sweet lovers.",
+    "prices": {
+      "250g": 215,
+      "500g": 425,
+      "1kg": 850
+    },
+    "defaultWeight": "1kg",
+    "image": "data/images/postshik-ladoo.jpg",
+    "images": ["data/images/postshik-ladoo.jpg"],
+    "available": true,
+    "festivalSpecial": false,
+    "customOptions": ["with-sugar", "with-jaggery", "sugar-free"],
+    "nutrition": "Packed with multivitamins and minerals",
+    "rating": 4.7,
+    "reviews": 29
+  },
+  {
+    "id": 4,
+    "name": "Besan Ladoo",
+    "category": "ladoo",
+    "tags": ["classic", "popular"],
+    "description": "Rich, nutty, and melt-in-the-mouth dessert commonly enjoyed and loved by everyone. Made with roasted chickpea flour, pure ghee and sugar.",
+    "prices": {
+      "250g": 200,
+      "500g": 400,
+      "1kg": 800
+    },
+    "defaultWeight": "1kg",
+    "image": "data/images/besan-ladoo.jpg",
+    "images": ["data/images/besan-ladoo.jpg"],
+    "available": true,
+    "festivalSpecial": true,
+    "festivalTags": ["diwali", "raksha-bandhan"],
+    "customOptions": ["with-sugar", "sugar-free", "low-sugar"],
+    "nutrition": "Good source of protein from chickpea flour",
+    "rating": 4.9,
+    "reviews": 67
+  },
+  {
+    "id": 5,
+    "name": "Rava Ghee Ladoo",
+    "category": "ladoo",
+    "tags": ["classic", "ghee-special"],
+    "description": "Delicious semolina ladoo made with pure homemade ghee, sugar, cardamom and dry fruits. A timeless classic from every Indian household.",
+    "prices": {
+      "250g": 190,
+      "500g": 375,
+      "1kg": 750
+    },
+    "defaultWeight": "1kg",
+    "image": "data/images/rava-ladoo.jpg",
+    "images": ["data/images/rava-ladoo.jpg"],
+    "available": true,
+    "festivalSpecial": true,
+    "festivalTags": ["ganesh-chaturthi", "diwali"],
+    "customOptions": ["with-sugar", "low-sugar"],
+    "nutrition": "Energy-rich with healthy fats from pure ghee",
+    "rating": 4.8,
+    "reviews": 54
+  },
+  {
+    "id": 6,
+    "name": "Shev Che Ladoo",
+    "category": "ladoo",
+    "tags": ["unique", "crunchy"],
+    "description": "Unique ladoo made with crispy sev, jaggery and ghee. A crunchy-sweet combination that is absolutely irresistible.",
+    "prices": {
+      "250g": 190,
+      "500g": 375,
+      "1kg": 750
+    },
+    "defaultWeight": "1kg",
+    "image": "data/images/shev-ladoo.jpg",
+    "images": ["data/images/shev-ladoo.jpg"],
+    "available": true,
+    "festivalSpecial": false,
+    "customOptions": ["with-jaggery", "with-sugar"],
+    "nutrition": "Good source of carbohydrates and energy",
+    "rating": 4.6,
+    "reviews": 31
+  },
+  {
+    "id": 7,
+    "name": "Damthi Che Ladoo",
+    "category": "ladoo",
+    "tags": ["traditional", "healthy"],
+    "description": "Traditional Maharashtrian ladoo made from roasted gram flour, coconut and jaggery. A rustic homemade delicacy.",
+    "prices": {
+      "250g": 190,
+      "500g": 375,
+      "1kg": 750
+    },
+    "defaultWeight": "1kg",
+    "image": "data/images/damthi-ladoo.jpg",
+    "images": ["data/images/damthi-ladoo.jpg"],
+    "available": true,
+    "festivalSpecial": false,
+    "customOptions": ["with-jaggery"],
+    "nutrition": "Rich in fibre and natural sugars from jaggery",
+    "rating": 4.5,
+    "reviews": 22
+  },
+  {
+    "id": 8,
+    "name": "Halim Che Ladoo",
+    "category": "ladoo",
+    "tags": ["healthy", "rare", "winter-special"],
+    "description": "Made from halim (garden cress) seeds, known for their incredible health benefits. Rich in iron and perfect for post-natal care and winters.",
+    "prices": {
+      "250g": 200,
+      "500g": 400,
+      "1kg": 800
+    },
+    "defaultWeight": "1kg",
+    "image": "data/images/halim-ladoo.jpg",
+    "images": ["data/images/halim-ladoo.jpg"],
+    "available": true,
+    "festivalSpecial": false,
+    "customOptions": ["with-jaggery", "with-sugar"],
+    "nutrition": "Extremely high in iron, calcium and folic acid",
+    "rating": 4.9,
+    "reviews": 18
+  },
+  {
+    "id": 9,
+    "name": "Kanik Che Ladoo",
+    "category": "ladoo",
+    "tags": ["traditional", "wheat"],
+    "description": "Traditional wheat bran ladoo made with pure ghee and jaggery. A wholesome sweet packed with fibre and nutrients.",
+    "prices": {
+      "250g": 190,
+      "500g": 375,
+      "1kg": 750
+    },
+    "defaultWeight": "1kg",
+    "image": "data/images/kanik-ladoo.jpg",
+    "images": ["data/images/kanik-ladoo.jpg"],
+    "available": true,
+    "festivalSpecial": false,
+    "customOptions": ["with-jaggery"],
+    "nutrition": "High fibre content, aids digestion",
+    "rating": 4.5,
+    "reviews": 15
+  },
+  {
+    "id": 10,
+    "name": "Fresh Coconut Ladoo",
+    "category": "ladoo",
+    "tags": ["fresh", "coconut", "popular"],
+    "description": "Freshly made coconut ladoo with fresh grated coconut, milk and sugar. Soft, moist and absolutely delicious. Best consumed fresh.",
+    "prices": {
+      "250g": 215,
+      "500g": 425,
+      "1kg": 850
+    },
+    "defaultWeight": "1kg",
+    "image": "data/images/coconut-ladoo.jpg",
+    "images": ["data/images/coconut-ladoo.jpg"],
+    "available": true,
+    "festivalSpecial": true,
+    "festivalTags": ["ganesh-chaturthi"],
+    "customOptions": ["with-sugar", "sugar-free", "with-jaggery"],
+    "nutrition": "Rich in healthy fats and natural coconut nutrients",
+    "rating": 4.8,
+    "reviews": 45
+  },
+  {
+    "id": 11,
+    "name": "Peanut Ladoo",
+    "category": "ladoo",
+    "tags": ["vegan", "healthy", "popular"],
+    "description": "Crunchy and delicious peanut ladoo made with roasted peanuts and jaggery. A healthy, protein-packed sweet treat loved by all.",
+    "prices": {
+      "250g": 175,
+      "500g": 350,
+      "1kg": 700
+    },
+    "defaultWeight": "1kg",
+    "image": "data/images/peanut-ladoo.jpg",
+    "images": ["data/images/peanut-ladoo.jpg"],
+    "available": true,
+    "festivalSpecial": false,
+    "customOptions": ["with-jaggery", "vegan"],
+    "nutrition": "Excellent source of plant-based protein",
+    "rating": 4.7,
+    "reviews": 38
+  },
+  {
+    "id": 12,
+    "name": "Khoya Peda",
+    "category": "peda",
+    "tags": ["classic", "milk-based", "gift"],
+    "description": "Soft, melt-in-mouth peda made from reduced milk (khoya), sugar and cardamom. A classic Indian mithai that needs no introduction.",
+    "prices": {
+      "240g (¼kg)": 960
+    },
+    "defaultWeight": "240g (¼kg)",
+    "image": "data/images/khoya-peda.jpg",
+    "images": ["data/images/khoya-peda.jpg"],
+    "available": true,
+    "festivalSpecial": true,
+    "festivalTags": ["diwali", "raksha-bandhan"],
+    "customOptions": ["with-sugar", "low-sugar", "sugar-free"],
+    "nutrition": "Rich in calcium and milk proteins",
+    "rating": 4.8,
+    "reviews": 52
+  },
+  {
+    "id": 13,
+    "name": "Khoya Modak",
+    "category": "modak",
+    "tags": ["ganesh-special", "premium"],
+    "description": "Premium modak with a soft khoya filling encased in a delicate rice flour shell. Lord Ganesha's favourite sweet, made with love.",
+    "prices": {
+      "240g (¼kg)": 960
+    },
+    "defaultWeight": "240g (¼kg)",
+    "image": "data/images/khoya-modak.jpg",
+    "images": ["data/images/khoya-modak.jpg"],
+    "available": true,
+    "festivalSpecial": true,
+    "festivalTags": ["ganesh-chaturthi"],
+    "customOptions": ["with-sugar", "sugar-free"],
+    "nutrition": "Rich in calcium and energy from khoya",
+    "rating": 4.9,
+    "reviews": 89
+  },
+  {
+    "id": 14,
+    "name": "Ukadiche Modak",
+    "category": "modak",
+    "tags": ["ganesh-special", "steamed", "traditional"],
+    "description": "A delicate steamed rice-flour shell filled with a mixture of fresh coconut and jaggery. The most sacred and beloved sweet of Ganesh Chaturthi.",
+    "prices": {
+      "1 piece": 25
+    },
+    "defaultWeight": "1 piece",
+    "image": "data/images/ukadiche-modak.jpg",
+    "images": ["data/images/ukadiche-modak.jpg"],
+    "available": true,
+    "festivalSpecial": true,
+    "festivalTags": ["ganesh-chaturthi"],
+    "customOptions": ["with-jaggery"],
+    "nutrition": "Low calorie, natural coconut and jaggery goodness",
+    "rating": 5.0,
+    "reviews": 124
+  },
+  {
+    "id": 15,
+    "name": "Gulab Jamun",
+    "category": "other-sweets",
+    "tags": ["classic", "syrup", "popular"],
+    "description": "Soft, spongy khoya balls soaked in rose-flavored sugar syrup. A timeless classic served at every celebration.",
+    "prices": {
+      "1 piece": 20
+    },
+    "defaultWeight": "1 piece",
+    "image": "data/images/gulab-jamun.jpg",
+    "images": ["data/images/gulab-jamun.jpg"],
+    "available": true,
+    "festivalSpecial": true,
+    "festivalTags": ["diwali", "raksha-bandhan"],
+    "customOptions": ["with-sugar", "low-sugar"],
+    "nutrition": "High in energy, best enjoyed warm",
+    "rating": 4.9,
+    "reviews": 98
+  },
+  {
+    "id": 16,
+    "name": "Puran Poli",
+    "category": "other-sweets",
+    "tags": ["traditional", "maharashtrian", "festival"],
+    "description": "Traditional Maharashtrian flatbread stuffed with a sweet lentil and jaggery filling. A festive must-have, made fresh to order.",
+    "prices": {
+      "1 piece": 30
+    },
+    "defaultWeight": "1 piece",
+    "image": "data/images/puran-poli.jpg",
+    "images": ["data/images/puran-poli.jpg"],
+    "available": true,
+    "festivalSpecial": true,
+    "festivalTags": ["holi", "diwali"],
+    "customOptions": ["with-jaggery", "with-sugar"],
+    "nutrition": "Good source of protein from lentils",
+    "rating": 4.8,
+    "reviews": 61
+  },
+  {
+    "id": 17,
+    "name": "Gajar Halwa",
+    "category": "halwa",
+    "tags": ["winter-special", "classic", "warm"],
+    "description": "Classic Indian carrot dessert slow-cooked with milk, pure ghee, sugar and cardamom. Best served warm. A winter favourite.",
+    "prices": {
+      "250g": 165,
+      "500g": 325,
+      "1kg": 650
+    },
+    "defaultWeight": "1kg",
+    "image": "data/images/gajar-halwa.jpg",
+    "images": ["data/images/gajar-halwa.jpg"],
+    "available": true,
+    "festivalSpecial": false,
+    "customOptions": ["with-sugar", "low-sugar", "sugar-free"],
+    "nutrition": "Rich in beta-carotene, vitamin A and antioxidants",
+    "rating": 4.8,
+    "reviews": 73
+  },
+  {
+    "id": 18,
+    "name": "Shankarpali",
+    "category": "snacks",
+    "tags": ["crunchy", "snack", "festive"],
+    "description": "Crispy, flaky sweet pastry diamonds made with refined flour, ghee and sugar. An irresistible festive snack loved by all ages.",
+    "prices": {
+      "250g": 125,
+      "500g": 250,
+      "1kg": 500
+    },
+    "defaultWeight": "1kg",
+    "image": "data/images/shankarpali.jpg",
+    "images": ["data/images/shankarpali.jpg"],
+    "available": true,
+    "festivalSpecial": true,
+    "festivalTags": ["diwali"],
+    "customOptions": ["with-sugar", "low-sugar"],
+    "nutrition": "Energy-dense festive snack",
+    "rating": 4.6,
+    "reviews": 44
+  },
+  {
+    "id": 19,
+    "name": "Kanranji",
+    "category": "snacks",
+    "tags": ["traditional", "fried", "festive"],
+    "description": "Crispy deep-fried pastry pockets filled with coconut, sugar and dry fruits. A beloved Maharashtrian festive treat.",
+    "prices": {
+      "250g": 200,
+      "500g": 400,
+      "1kg": 800
+    },
+    "defaultWeight": "1kg",
+    "image": "data/images/kanranji.jpg",
+    "images": ["data/images/kanranji.jpg"],
+    "available": true,
+    "festivalSpecial": true,
+    "festivalTags": ["diwali"],
+    "customOptions": ["with-sugar", "with-jaggery"],
+    "nutrition": "Rich in coconut nutrients and natural energy",
+    "rating": 4.7,
+    "reviews": 37
+  }
+]
